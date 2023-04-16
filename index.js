@@ -65,10 +65,16 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-  /*your code here*/
- }
+function is31Flavors(arr){
+  if (arr.length === 31) {
+    return true} 
+    else {
+      return false
+    }
+  }
 
+is31Flavors(originalFlavors);
+// console.log(is31Flavors(originalFlavors));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -84,9 +90,12 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-  /*your code here*/
+function addFlavor(flavList,newFlav){
+  flavList.unshift(newFlav); 
+  return flavList;
  }
+
+ console.log(addFlavor(originalFlavors,"The Tonight Dough"));
 
 
 
@@ -102,9 +111,12 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(arr){
+ arr.pop();
+ return arr ;
 }
+
+removeLastFlavor(originalFlavors);
 
 
 
