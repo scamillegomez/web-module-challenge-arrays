@@ -132,14 +132,17 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(arr,ind){
+  return arr[ind];
 }
+
+getFlavorByIndex(3);
 
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that single flavor from the array.  
+As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name,
+ as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that single flavor from the array.  
 
 Use the removeFlavorByName function below to do the following:
   1. Receive an array in the first parameter that will take the flavors array as an argument
@@ -152,15 +155,20 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(arr,flav){
+  const flavIndex = arr.indexOf(flav);
+  arr.splice(flavIndex,1);
+  return arr;
 }
+
+removeFlavorByName(originalFlavors);
 
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
-Your task is to write a function that checks every item in the array for a string and returns a new array called filteredArray with only the values that contain the received string. This would allow you to be able to filter for "Vanilla", "Sherbet", "Lemon" etc. when different holidays roll around by passing in those specific strings.
+Your task is to write a function that checks every item in the array for a string and returns a new array called filteredArray with only the values that contain the received string. 
+This would allow you to be able to filter for "Vanilla", "Sherbet", "Lemon" etc. when different holidays roll around by passing in those specific strings.
 
 Use the filterByWord function below to do the following:
   1. Receive an array in the first parameter that will take the flavors array as an argument
@@ -177,9 +185,29 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+
+
+function filterByWord(arr,flavstr){
+  const filteredFlavors = [];
+  for (let i = 0 ; i < arr.length ; i++){
+
+    if (arr[i].includes(flavstr)) {
+
+      filteredFlavors.push(arr[i]);
+
+      console.log(filteredFlavors);
+
+    }
+    // return filteredFlavors;
+    // console.log(filteredFlavors);
+  }
+  
+  // console.log(filteredFlavors);
+  return filteredFlavors;
 }
+
+filterByWord(originalFlavors,'Chocolate');
+// console.log(filterByWord(originalFlavors,'Chocolate'));
 
 
 
